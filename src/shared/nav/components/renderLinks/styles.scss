@@ -1,0 +1,39 @@
+@import "../../../../styles/main";
+
+.RenderLinks {
+  display: flex;
+
+  li {
+    margin-right: 8px;
+    position: relative;
+
+    @include for-phone-only {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .basket-count {
+    color: $GRADATION2;
+    position: absolute;
+    z-index: 2;
+    top: -8px;
+    right: -1px;
+    background: $GREEN;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    min-width: 20px;
+  }
+
+  @include for-phone-only {
+    flex-direction: column;
+    margin: 0;
+  }
+}

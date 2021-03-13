@@ -1,0 +1,7 @@
+@import "../../../../styles/main";
+
+.DesktopNav {
+  @include for-phone-only {
+    display: none;
+  }
+}

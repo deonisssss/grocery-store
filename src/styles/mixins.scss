@@ -1,0 +1,5 @@
+@import "breakpoints";
+
+@mixin for-phone-only {
+  @media (max-width: $phone) { @content; }
+}

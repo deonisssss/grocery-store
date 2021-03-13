@@ -1,0 +1,54 @@
+@import "../../../styles/main";
+
+.BasicButton {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  outline: none;
+  overflow: hidden;
+  transition: $FAST-SPEED;
+  font-size: inherit;
+
+  &:active {
+    filter: brightness(.6);
+    transition: $VERY_FAST_SPEED;
+  }
+
+  &-slider {
+    max-width: 0;
+    transition: $MIDDLE-SPEED;
+    opacity: 0;
+    white-space: nowrap;
+
+    @include for-phone-only {
+      display: none;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+
+    @include for-phone-only {
+      box-shadow: none;
+    }
+
+    .BasicButton-slider {
+      max-width: 400px;
+      opacity: 1;
+    }
+  }
+}
+
+.outlined {
+  border: 2px solid $GRADATION1;
+  border-radius: 8px;
+  color: $GRADATION1;
+}
+
+.BasicButton-link {
+  text-decoration: none;
+}

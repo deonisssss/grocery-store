@@ -1,0 +1,23 @@
+@import "../../../../styles/main";
+
+.MobileNav {
+  display: none;
+
+  &-Menu {
+    background: $GRADATION4;
+    height: 100%;
+    padding: 8px;
+  }
+
+  &-Menu-wrapper {
+    display: none;
+
+    @include for-phone-only {
+      display: block;
+    }
+  }
+
+  @include for-phone-only {
+    display: block;
+  }
+}

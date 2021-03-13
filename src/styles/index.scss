@@ -1,0 +1,75 @@
+@import "./main";
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+* {
+  font-family: Roboto, serif;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.regular-link {
+  text-decoration: underline;
+  color: $GRADATION2;
+
+  &:hover {
+    color: $GRADATION4;
+  }
+}
+
+.page-icon {
+  display: flex;
+  justify-content: center;
+  color: $GRADATION2;
+  margin-bottom: 8px;
+}
+
+img {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 1px;
+  position: absolute;
+
+  @include for-phone-only {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

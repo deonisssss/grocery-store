@@ -1,0 +1,70 @@
+@import "../../styles/main";
+
+.Shop {
+  &-products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+
+    @include for-phone-only {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &-cost-container {
+    margin-bottom: 8px;
+  }
+
+  &-cost-container-cost {
+    font-weight: bold;
+  }
+
+  &-product {
+    background: $WHITE;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .2);
+    color: $GRADATION3;
+    position: relative;
+
+    .discount {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $RED;
+      color: $WHITE;
+      width: 60px;
+      height: 60px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px 0 8px 0;
+      text-align: center;
+
+      .cost, .count {
+        font-weight: bold;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      margin: 8px 0;
+      font-weight: lighter;
+    }
+
+    button {
+      background: $GREEN;
+      color: $GRADATION2;
+      border-radius: 8px;
+      margin: 8px 0;
+    }
+  }
+}
